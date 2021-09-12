@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-size: 100%;
+  font-family: "Playfair Display", sans-serif;
 }
 
 div.landing {
@@ -29,29 +29,53 @@ div.landing {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 10% 0 10%;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  margin: 0 30% 0 30%;
   height: 100vh;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
-div.landing-main-text {
+div#landing-main-text {
+  font-family: "Playfair Display", sans-serif;
   text-align: center;
-  /* @include border-box(); */
   margin-top: auto;
-  font-family: "Playfair Display", serif;
-  font-size: 30px;
-  font-weight: 1;
+}
+
+h1.main-text {
+  color: #31476A;
+  font-weight: 400;
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.bold-name {
+  font-weight: 800;
+  font-size: 65px;
+  line-height: 100px;
+  color: #001E4B;
+  letter-spacing: 1px;
+}
+
+.heading-period {
+  font-weight: 400;
+}
+
+a.italic-text {
+  font-style: italic;
+  text-decoration: none;
+  color: #31476A;
+  font-weight: 500;
 }
 
 div.landing-scroll-text {
   text-align: center;
-  /* @include border-box(); */
   margin-top: auto;
   margin-bottom: 50px;
+  font-size: 15px;
+  font-family: "Lora", serif;
+  color: #31476A;
+}
+
+i {
+  color: #31476A;
 }
 
 h1.title,

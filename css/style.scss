@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
-$main-text-color: #001E4B;
+$main-text-color: #31476A;
+$main-bold-text-color: #001E4B;
 $header-font: 'Playfair Display';
+$sub-header-font: 'Lora';
 
 $main-light-text: black;
 $large-text-size: 3.5em;
@@ -24,7 +26,8 @@ html {
 }
 
 body {
-  font-size: 100%;
+  // font-size: 100%;
+  font-family: $header-font, sans-serif;
 }
 
 div.landing {
@@ -32,28 +35,55 @@ div.landing {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 10% 0 10%;
-  flex-basis: 100%;
+  margin: 0 30% 0 30%;
   height: 100vh;
-  flex: 1;
-  
-  // @include border-box();
 }
 
-div.landing-main-text {
+div#landing-main-text {
+  font-family: $header-font, sans-serif;
+  // font-style: normal;
   text-align: center;
-  /* @include border-box(); */
   margin-top: auto;
-  font-family: $header-font, serif;
-  font-size: 30px;
-  font-weight: 1;
+  
+}
+
+h1.main-text {
+  color: $main-text-color;
+  font-weight: 400;
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.bold-name {
+  font-weight: 800;
+  font-size: 65px;
+  line-height: 100px;
+  color: $main-bold-text-color;
+  letter-spacing: 1px;
+}
+
+.heading-period {
+  font-weight: 400;
+}
+
+a.italic-text {
+  font-style: italic;
+  text-decoration: none;
+  color: $main-text-color;
+  font-weight: 500;
 }
 
 div.landing-scroll-text {
   text-align: center;
-  /* @include border-box(); */
   margin-top: auto;
   margin-bottom: 50px;
+  font-size: 15px;
+  font-family: $sub-header-font, serif;
+  color: $main-text-color;
+}
+
+i {
+  color: $main-text-color;
 }
 
 h1.title,
