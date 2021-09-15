@@ -6,14 +6,19 @@ $main-bold-text-color: #001E4B;
 $header-font: 'Playfair Display';
 $sub-header-font: 'Lora';
 
+@mixin shape-defaults() {
+  opacity: 0.5;
+  filter: blur(80px);
+  position: absolute;
+  z-index: 1;
+}
+$blue-shape-color: #7897D2;
+$red-shape-color: #FF7E76;
+$yellow-shape-color: #EDAA6C;
+
 $main-light-text: black;
 $large-text-size: 3.5em;
 $navbar-height: 80px;
-
-@mixin border-box() {
-  border-style: solid;
-  border-color: #fff;
-}
 
 * {
   box-sizing: border-box;
@@ -26,10 +31,10 @@ html {
 }
 
 body {
-  // font-size: 100%;
   font-family: $header-font, sans-serif;
 }
 
+//landing page text
 div.landing {
   display: flex;
   flex-direction: column;
@@ -44,7 +49,7 @@ div#landing-main-text {
   // font-style: normal;
   text-align: center;
   margin-top: auto;
-  
+  z-index: 100;
 }
 
 h1.main-text {
@@ -73,18 +78,86 @@ a.italic-text {
   font-weight: 500;
 }
 
-div.landing-scroll-text {
+//landing page scroll text
+a.landing-scroll-link {
+  text-decoration: none;
+}
+
+.landing-scroll-text {
   text-align: center;
   margin-top: auto;
   margin-bottom: 50px;
   font-size: 15px;
   font-family: $sub-header-font, serif;
   color: $main-text-color;
+  z-index: 100;
 }
 
 i {
   color: $main-text-color;
 }
+
+// Landing page background shapes
+.top-right-red {
+  height: 300px;
+  width: 450px;
+  background-color: $red-shape-color;
+  border-radius: 50% 30% 30% 60% / 60% 40% 80% 30%;
+  top: -80px;
+  right: 80px;
+  @include shape-defaults();
+}
+
+.top-right-blue {
+  height: 400px;
+  width: 400px;
+  background-color: $blue-shape-color;
+  border-radius: 83% 17% 57% 43% / 67% 66% 34% 33% ;
+  top: 150px;
+  right: -150px;
+  @include shape-defaults();
+}
+
+.top-right-yellow {
+  height: 300px;
+  width: 300px;
+  background-color: $yellow-shape-color;
+  border-radius: 52% 48% 47% 53% / 51% 46% 54% 49%  ;
+  top: 250px;
+  right: 350px;
+  @include shape-defaults();
+}
+
+.bottom-left-red {
+  height: 300px;
+  width: 500px;
+  background-color: $red-shape-color;
+  border-radius: 50% 30% 30% 60% / 60% 40% 80% 30%;
+  bottom: -200px;
+  left: -80px;
+  @include shape-defaults();
+}
+
+.bottom-left-blue {
+  height: 300px;
+  width: 300px;
+  background-color: $blue-shape-color;
+  border-radius: 83% 17% 57% 43% / 67% 66% 34% 33% ;
+  bottom: 150px;
+  left: -100px;
+  @include shape-defaults();
+}
+
+.bottom-left-yellow {
+  height: 350px;
+  width: 350px;
+  background-color: $yellow-shape-color;
+  border-radius: 52% 48% 47% 53% / 51% 46% 54% 49%  ;
+  bottom: 60px;
+  left: 350px;
+  @include shape-defaults();
+}
+
 
 h1.title,
 h1.subtitle {
