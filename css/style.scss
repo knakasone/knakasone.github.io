@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 $main-text-color: #31476A;
 $main-bold-text-color: #001E4B;
-$header-font: 'Playfair Display';
-$sub-header-font: 'Lora';
+$header-font: 'Playfair Display', serif;
+$scroll-font: 'Lora', serif;
+$sub-header-font: 'Petrona', serif;
 
 @mixin shape-defaults() {
   opacity: 0.5;
@@ -16,22 +18,45 @@ $blue-shape-color: #7897D2;
 $red-shape-color: #FF7E76;
 $yellow-shape-color: #EDAA6C;
 
+$navbar-height: 8vh;
+@mixin navbar-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%;
+    padding: 0 20px;
+    font-family: $sub-header-font;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    // @include box();
+}
+@mixin box {
+  border-style: solid;
+  border-width: 1px;
+  border-width: $main-bold-text-color;
+}
+
 $main-light-text: black;
 $large-text-size: 3.5em;
-$navbar-height: 80px;
+
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  // @include box();
 }
 
 html {
   background-color: #F6F0EC;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  font-family: $header-font, sans-serif;
+  font-family: $header-font;
+  // width: 100vw;
 }
 
 //landing page text
@@ -45,7 +70,7 @@ div.landing {
 }
 
 div#landing-main-text {
-  font-family: $header-font, sans-serif;
+  font-family: $header-font;
   // font-style: normal;
   text-align: center;
   margin-top: auto;
@@ -88,7 +113,7 @@ a.landing-scroll-link {
   margin-top: auto;
   margin-bottom: 50px;
   font-size: 15px;
-  font-family: $sub-header-font, serif;
+  font-family: $scroll-font, serif;
   color: $main-text-color;
   z-index: 100;
 }
@@ -129,11 +154,11 @@ i {
 }
 
 .bottom-left-red {
-  height: 300px;
+  height: 100px;
   width: 500px;
   background-color: $red-shape-color;
   border-radius: 50% 30% 30% 60% / 60% 40% 80% 30%;
-  bottom: -200px;
+  bottom: 0px;
   left: -80px;
   @include shape-defaults();
 }
@@ -158,24 +183,13 @@ i {
   @include shape-defaults();
 }
 
-
-h1.title,
-h1.subtitle {
-  color: $main-light-text;
-  font-weight: 700;
-  font-size: $large-text-size;
-}
-
-h1 span {
-  color: #001E4B;
-}
-
-h3 {
-  color: #001E4B;
-}
-
+//Navigation Bar
 div.navbar {
-  background: #09233A;
+  background: #F8EDE6;
+  opacity: 0.8;
+  color: $main-bold-text-color;
+  width: 100vw;
+  filter: drop-shadow(0 4px 4px #cccccc);
   display: flex;
   height: $navbar-height;
   justify-content: center;
@@ -184,38 +198,94 @@ div.navbar {
   position: sticky;
   top: 0;
   z-index: 999;
-  // @include border-box();
+
+  a {
+    text-decoration: none;
+    color: $main-bold-text-color;
+  }
+
+  div.left-nav-item-container, 
+  div.right-nav-item-container {
+    @include navbar-text();
+  }
+
+  div.nav-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-family: $header-font;
+    // @include box();
+  }
 }
 
-div.nav-header {
-  margin-right: auto;
-  padding-left: 20px;
-}
-
-h1.nav-header-text {
-  color: $main-light-text;
-  font-weight: 700;
-  font-size: 1.5em;
-}
-
-div.nav-item-container {
+@mixin section-settings {
+  height: 100vh;
+  width: 55vw;
+  padding-top: 20vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 20px;
-  height: $navbar-height;
-  width: 30%;
-  // @include border-box();
+  flex-direction: column;
 }
 
-a.navbar-link {
-  color: #fff;
+div.main {
+  width: 100vw;
+
+  h2 {
+    letter-spacing: 1px;
+    font-family: $header-font;
+    font-weight: 700;
+    font-size: 30px;
+  }
+
+  hr {
+    border: 1px solid $main-bold-text-color;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-family: $sub-header-font;
+    font-weight: 550;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-a.navbar-button {
-  color: #fff;
+.projects {
+  @include section-settings();
+
+  p {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto; 
+  }
 }
 
-h2.about-heading {
-  padding-bottom: 1500px;
+.my-art {
+  @include section-settings();
+
+  p {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto; 
+  }
+}
+
+.about {
+  @include section-settings();
+}
+
+.contact {
+  @include section-settings();
 }
