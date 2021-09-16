@@ -8,29 +8,9 @@ $header-font: 'Playfair Display', serif;
 $scroll-font: 'Lora', serif;
 $sub-header-font: 'Petrona', serif;
 
-@mixin shape-defaults() {
-  opacity: 0.5;
-  filter: blur(80px);
-  position: absolute;
-  z-index: 1;
-}
-$blue-shape-color: #7897D2;
-$red-shape-color: #FF7E76;
-$yellow-shape-color: #EDAA6C;
 
-$navbar-height: 8vh;
-@mixin navbar-text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 15%;
-    padding: 0 20px;
-    font-family: $sub-header-font;
-    font-size: 18px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    // @include box();
-}
+
+
 @mixin box {
   border-style: solid;
   border-width: 1px;
@@ -56,7 +36,6 @@ html {
 
 body {
   font-family: $header-font;
-  // width: 100vw;
 }
 
 //landing page text
@@ -106,6 +85,7 @@ a.italic-text {
 //landing page scroll text
 a.landing-scroll-link {
   text-decoration: none;
+  color: $main-text-color;
 }
 
 .landing-scroll-text {
@@ -116,11 +96,23 @@ a.landing-scroll-link {
   font-family: $scroll-font, serif;
   color: $main-text-color;
   z-index: 100;
+
+  i {
+    color: $main-text-color;
+  }
 }
 
-i {
-  color: $main-text-color;
+
+
+@mixin shape-defaults() {
+  opacity: 0.5;
+  filter: blur(80px);
+  position: absolute;
+  z-index: 1;
 }
+$blue-shape-color: #7897D2;
+$red-shape-color: #FF7E76;
+$yellow-shape-color: #EDAA6C;
 
 // Landing page background shapes
 .top-right-red {
@@ -183,6 +175,20 @@ i {
   @include shape-defaults();
 }
 
+$navbar-height: 8vh;
+@mixin navbar-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%;
+    margin-top: 20px;
+    font-family: $sub-header-font;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    // @include box();
+}
+
 //Navigation Bar
 div.navbar {
   background: #F8EDE6;
@@ -219,6 +225,55 @@ div.navbar {
     // @include box();
   }
 }
+
+.social-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(248, 237, 230, 0.7);
+  position: sticky;
+  top: 70vh;
+  float: right;
+  margin-right: 0px;
+  width: 35px;
+  border-radius: 5px;
+  filter: drop-shadow(-2px 2px 5px #c5c5c5);
+  z-index: 998;
+  // @include box();
+
+  a {
+    color: $main-text-color;
+    opacity: 1;
+    font-size: 22px;
+    z-index: 999;
+  }
+
+  i {
+    padding: 5px 5px;
+  }
+}
+
+// @media  screen and (max-width: 768px) {
+//   div.navbar {
+//     width: 100vw;
+//   }
+
+//   div.left-nav-item-container, 
+//   div.right-nav-item-container {
+//     @include navbar-text();
+//   }
+
+//   div.nav-header {
+//     display: flex;
+//     justify-content: left;
+//     align-items: center;
+//     padding-left: 20%;
+//     padding-right: 20%;
+//     font-family: $header-font;
+//     // @include box();
+//   }
+// }
 
 @mixin section-settings {
   height: 100vh;
@@ -288,4 +343,8 @@ div.main {
 
 .contact {
   @include section-settings();
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

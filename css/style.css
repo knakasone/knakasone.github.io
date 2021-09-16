@@ -71,6 +71,7 @@ a.italic-text {
 
 a.landing-scroll-link {
   text-decoration: none;
+  color: #31476A;
 }
 
 .landing-scroll-text {
@@ -83,7 +84,7 @@ a.landing-scroll-link {
   z-index: 100;
 }
 
-i {
+.landing-scroll-text i {
   color: #31476A;
 }
 
@@ -212,7 +213,7 @@ div.navbar div.right-nav-item-container {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 15%;
-  padding: 0 20px;
+  margin-top: 20px;
   font-family: "Petrona", serif;
   font-size: 18px;
   font-weight: 900;
@@ -232,6 +233,44 @@ div.navbar div.nav-header {
   padding-left: 20%;
   padding-right: 20%;
   font-family: "Playfair Display", serif;
+}
+
+.social-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(248, 237, 230, 0.7);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 70vh;
+  float: right;
+  margin-right: 0px;
+  width: 35px;
+  border-radius: 5px;
+  -webkit-filter: drop-shadow(-2px 2px 5px #c5c5c5);
+          filter: drop-shadow(-2px 2px 5px #c5c5c5);
+  z-index: 998;
+}
+
+.social-menu a {
+  color: #31476A;
+  opacity: 1;
+  font-size: 22px;
+  z-index: 999;
+}
+
+.social-menu i {
+  padding: 5px 5px;
 }
 
 div.main {
@@ -345,5 +384,9 @@ div.main .sections {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
