@@ -22,17 +22,23 @@ $large-text-size: 3.5em;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  // @include box();
+  scroll-behavior: smooth;
 }
 
 html {
   background-color: #F6F0EC;
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 body {
   font-family: $header-font;
+}
+
+.page-container {
+  // scroll-snap-type: y mandatory;
+  // overflow-y: scroll;
+  // height: 100%;
+  // width: 100vw;
 }
 
 //landing page text
@@ -41,13 +47,12 @@ div.landing {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 30% 0 30%;
+  margin: 0 30%;
   height: 100vh;
 }
 
 div#landing-main-text {
   font-family: $header-font;
-  // font-style: normal;
   text-align: center;
   margin-top: auto;
   z-index: 100;
@@ -98,8 +103,6 @@ a.landing-scroll-link {
     color: $main-text-color;
   }
 }
-
-
 
 @mixin shape-defaults() {
   opacity: 0.5;
@@ -184,6 +187,44 @@ $navbar-height: 8vh;
     font-weight: 900;
     letter-spacing: 1px;
     // @include box();
+}
+
+@media screen and (max-width: 1550px) {
+  h1.main-text {
+    font-size: 30px;
+  }
+  
+  .bold-name {
+    font-size: 45px;
+    line-height: 70px;
+  }
+  
+  
+}
+
+@media screen and (max-width: 983px) {
+  div.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10%;
+    height: 100vh;
+  }
+
+  h1.main-text {
+    font-size: 15px;
+    
+  }
+  
+  .bold-name {
+    font-size: 25px;
+    line-height: 50px;
+  }
+
+  .landing-scroll-text {
+    font-size: 10px;
+  }
 }
 
 //Navigation Bar
@@ -304,6 +345,7 @@ div.main {
   }
 
   .sections {
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;

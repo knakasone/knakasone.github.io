@@ -6,11 +6,11 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 html {
   background-color: #F6F0EC;
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -32,7 +32,7 @@ div.landing {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 30% 0 30%;
+  margin: 0 30%;
   height: 100vh;
 }
 
@@ -172,6 +172,46 @@ a.landing-scroll-link {
   z-index: 1;
 }
 
+@media screen and (max-width: 1550px) {
+  h1.main-text {
+    font-size: 30px;
+  }
+  .bold-name {
+    font-size: 45px;
+    line-height: 70px;
+  }
+}
+
+@media screen and (max-width: 983px) {
+  div.landing {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 10%;
+    height: 100vh;
+  }
+  h1.main-text {
+    font-size: 15px;
+  }
+  .bold-name {
+    font-size: 25px;
+    line-height: 50px;
+  }
+  .landing-scroll-text {
+    font-size: 10px;
+  }
+}
+
 div.navbar {
   background: #F8EDE6;
   opacity: 0.8;
@@ -298,6 +338,7 @@ div.main p {
 }
 
 div.main .sections {
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
