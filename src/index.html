@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/knakasone.github.io/css/style.css" />
+    <!-- <link rel="stylesheet" href="/knakasone.github.io/css/style.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/exy1sny.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Kelsie Nakasone</title>
 </head>
 
 <body>
     <div class="page-container" id="page-container">
-        <div class="landing">
+        <div class="landing" id="landing">
             <div id="landing-main-text">
                 <h1 class="main-text">welcome, my name is<br><span class="bold-name">Kelsie Nakasone<span
                             class="heading-period">.</span></span><br>I'm an
@@ -24,7 +25,7 @@
                     Join me on my design and<br> development journey.</h1>
             </div>
             <div class="landing-scroll-text" id="landing-scroll-text">
-                <a href="#main" class="landing-scroll-link">
+                <a href="#main" class="landing-scroll-link" id="landing-scroll-link">
                     <h3 class="scroll">Scroll down</h3>
                     <i class="fas fa-chevron-down"></i>
                 </a>
@@ -39,7 +40,7 @@
             </div>
         </div>
         <div class="main" id="main">
-            <div class="navbar">
+            <div class="navbar" id="navbar">
                 <div class="left-nav-item-container">
                     <a href="#projects" class="navbar-link">Projects</a>
                     <a href="#my-art" class="navbar-link">My Art</a>
@@ -68,17 +69,66 @@
                     <hr>
                     <p>I am constantly learning new software and skills. My past experience is in Java, HTML, CSS, and
                         Javascript. I’m currently learning specific Javascript frameworks such as React and Angular.</p>
-                    <div class="project-links"></div>
+                    <div class="projects-container">
+                        <div class="projects-row1">
+                            <div class="project-circle">
+                                <a href="pages/portfolio.html">
+                                    <div class="project-title">Portfolio website</div>
+                                    <div class="project-overlay">
+                                        <div class="project-overlay-text">
+                                            A custom built and designed website to show off my
+                                            projects and experience.
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="project-circle">
+                                <a href="pages/portfolio.html">
+                                    <div class="project-title">Portfolio website</div>
+                                    <div class="project-overlay">
+                                        <div class="project-overlay-text">
+                                            A custom built and designed website to show off my
+                                            projects and experience.
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="project-circle">
+                                <a href="pages/portfolio.html">
+                                    <div class="project-title">Portfolio website</div>
+                                    <div class="project-overlay">
+                                        <div class="project-overlay-text">
+                                            A custom built and designed website to show off my
+                                            projects and experience.
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="projects-row2"></div>
+
+                    </div>
                 </div>
                 <div class="my-art" id="my-art">
                     <h2>My Art</h2>
                     <hr>
-                    <p>While I do love design and typography, my main form of art is illustration. I love the textures
-                        and
-                        overall aesthetic of traditional paint and drawing materials. I also prefer to keep my subjects
-                        playful
-                        and cute since I want my art to bring joy in to the world. </p>
-                    <div class="art-blocks"></div>
+                    <p>While I do love design and typography, my favorite form of art is illustration. I love the
+                        textures and overall aesthetic of traditional paint and drawing materials. I also prefer to keep
+                        my subjects playful and cute since I want my art to bring joy in to the world. </p>
+                    <div class="art-blocks">
+                        <div class="art-blocks-row1">
+                            <img src="/images/instagram/rainbleh.jpg" alt="">
+                            <img src="/images/instagram/sketchbook.jpg" alt="">
+                            <img src="/images/instagram/iceberg.jpg" alt="">
+                            <img src="/images/instagram/fruit.jpg" alt="">
+                        </div>
+                        <div class="art-blocks-row2">
+                            <img src="/images/instagram/mochi.jpg" alt="">
+                            <img src="/images/instagram/rainbow.jpg" alt="">
+                            <img src="/images/instagram/ramen.jpg" alt="">
+                            <img src="/images/instagram/cottoncandy.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
                 <div class="about" id="about">
                     <h2>About</h2>
@@ -99,8 +149,8 @@
 
         </div>
     </div>
-    <!-- <script src="js/scroll.js"></script> -->
-    <script src="js/landing-opacity.js"></script>
 </body>
+
+<script src="js/smooth-scroll.js"></script>
 
 </html>
