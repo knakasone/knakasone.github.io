@@ -237,6 +237,7 @@ div.navbar {
   a {
     text-decoration: none;
     color: $main-bold-text-color;
+    padding: 5px 0;
   }
 
   div.left-nav-item-container, 
@@ -252,6 +253,13 @@ div.navbar {
     padding-right: 20%;
     font-family: $header-font;
     // @include box();
+  }
+
+  .selected-section {
+    position: absolute;
+    z-index: -2;
+    border-bottom: solid 2px $main-bold-text-color;
+    transition: all 0.5s ease;
   }
 }
 
@@ -464,6 +472,30 @@ $content-width: 90%;
 
 .about {
   @include section-settings();
+
+  .about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 5vw 0vh 5vw;
+    
+
+    .about-text {
+      width: 35vw;
+      margin-right: 5vw;
+    }
+
+    p {
+      text-indent: 40px;
+      text-align: justify;
+    }
+
+    img {
+      height: 50vh;
+      width: auto;
+    }
+  }
 }
 
 .contact {

@@ -238,6 +238,7 @@ div.navbar {
 div.navbar a {
   text-decoration: none;
   color: #001E4B;
+  padding: 5px 0;
 }
 
 div.navbar div.left-nav-item-container,
@@ -272,6 +273,14 @@ div.navbar div.nav-header {
   padding-left: 20%;
   padding-right: 20%;
   font-family: "Playfair Display", serif;
+}
+
+div.navbar .selected-section {
+  position: absolute;
+  z-index: -2;
+  border-bottom: solid 2px #001E4B;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .social-menu {
@@ -531,6 +540,38 @@ div.main .sections {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.about .about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5vh 5vw 0vh 5vw;
+}
+
+.about .about-content .about-text {
+  width: 35vw;
+  margin-right: 5vw;
+}
+
+.about .about-content p {
+  text-indent: 40px;
+  text-align: justify;
+}
+
+.about .about-content img {
+  height: 50vh;
+  width: auto;
 }
 
 .contact {

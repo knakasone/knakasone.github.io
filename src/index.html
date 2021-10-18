@@ -42,8 +42,8 @@
         <div class="main" id="main">
             <div class="navbar" id="navbar">
                 <div class="left-nav-item-container">
-                    <a href="#projects" class="navbar-link">Projects</a>
-                    <a href="#my-art" class="navbar-link">My Art</a>
+                    <a href="#projects" class="navbar-link" data-page="projects">Projects</a>
+                    <a href="#my-art" class="navbar-link" data-page="my-art">My Art</a>
                 </div>
                 <div class="nav-header">
                     <h1 class="nav-header-text">
@@ -51,9 +51,10 @@
                     </h1>
                 </div>
                 <div class="right-nav-item-container">
-                    <a href="#about" class="navbar-link">About</a>
-                    <a href="#contact" class="navbar-button">Contact Me</a>
+                    <a href="#about" class="navbar-link" data-page="about">About</a>
+                    <a href="#contact" class="navbar-button" data-page="contact">Contact Me</a>
                 </div>
+                <div class="selected-section"></div>
             </div>
             <div class="social-menu">
                 <a href="https://www.instagram.com/bykeistudio/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -64,7 +65,7 @@
                 <a href="mailto:kkrnakasone@gmail.com"><i class="far fa-envelope"></i></a>
             </div>
             <div class="sections" id="sections">
-                <div class="projects" id="projects">
+                <section class="projects" id="projects">
                     <h2>Projects</h2>
                     <hr>
                     <p>I am constantly learning new software and skills. My past experience is in Java, HTML, CSS, and
@@ -72,7 +73,7 @@
                     <div class="projects-container">
                         <div class="projects-row1">
                             <div class="project-circle">
-                                <a href="pages/portfolio.html">
+                                <a href="portfolio.html">
                                     <div class="project-title">Portfolio website</div>
                                     <div class="project-overlay">
                                         <div class="project-overlay-text">
@@ -108,8 +109,8 @@
                         <div class="projects-row2"></div>
 
                     </div>
-                </div>
-                <div class="my-art" id="my-art">
+                </section>
+                <section class="my-art" id="my-art">
                     <h2>My Art</h2>
                     <hr>
                     <p>While I do love design and typography, my favorite form of art is illustration. I love the
@@ -129,22 +130,47 @@
                             <img src="/images/instagram/cottoncandy.jpg" alt="">
                         </div>
                     </div>
-                </div>
-                <div class="about" id="about">
+                </section>
+                <section class="about" id="about">
                     <h2>About</h2>
                     <hr>
-                    <p>My name is Kelsie Nakasone. I majored in Computer Engineering at Northeastern University where I
-                        received
-                        my Bachelors of Science in 2020.</p>
-                    <img src="" alt="">
-                </div>
-                <div class="contact" id="contact">
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p> I grew up in and am currently based in Southern California. I went to college at
+                                Northeastern University in Boston, MA and graduated with a degree in Computer
+                                Engineering in 2020. During college, I worked multiple coops (6 month full-time
+                                positions). I worked in Information Technology at Harvard Kennedy School and then
+                                Bluewave Solar, I determined that Information Technology was not a career that I wanted
+                                to pursue.
+                            </p>
+                            <br>
+                            <p>
+                                Because I have always been drawn to art and design, I realized
+                                that I should combine my passion for art with my programming experience by going in to
+                                front-end development. So far, I have learned HTML, CSS, and Javascript, and I
+                                am currently taking two web development classes for front-end and back-end while
+                                also doing personal projects on the side.
+                            </p>
+
+
+                        </div>
+
+                        <img src="/images/kelsieNakasone-about.jpg" alt="Image of Kelsie Nakasone">
+                    </div>
+                </section>
+                <section class="contact" id="contact">
                     <h2>Contact Me</h2>
                     <hr>
-                    <form action="">
-
+                    <form action="mailto:kkrnakasone@gmail.com" method="POST" enctype="multipart/form-data"
+                        name="email-form">
+                        <label for="email">Your email address</label>
+                        <input type="email" class="form-email" id="form-email" required>
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" class="form-subject" id="form-subject">
+                        <textarea name="message" id="form-message" rows="5" maxlength="3000" required></textarea>
+                        <input type="submit" name="submit" class="form-submit" id="form-submit">
                     </form>
-                </div>
+                </section>
             </div>
 
         </div>
