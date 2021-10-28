@@ -1,7 +1,7 @@
 //Highlights the section in the nav bar as the user scrolls down the page
 const sections = document.querySelectorAll("section");
 const selectedSection = document.querySelector(".selected-section");
-const colors = ["red", "blue", "white"];
+const socialMenu = document.querySelector(".social-menu");
 
 //set to 70%
 const options = {
@@ -17,6 +17,7 @@ function navCheck(entries) {
     const className = entry.target.className;
     const activeAnchor = document.querySelector(`[data-page=${className}]`);
     const coords = activeAnchor.getBoundingClientRect();
+    console.log(activeAnchor);
     console.log(coords);
     const directions = {
       height: coords.height,
@@ -30,9 +31,10 @@ function navCheck(entries) {
       selectedSection.style.setProperty("width", `${directions.width}px`);
       selectedSection.style.setProperty("height", `${directions.height}px`);
       console.log(className);
-      // document.getElementsById(className).scrollIntoView({
-      //   behavior: "smooth",
-      // });
+
+      socialMenu.style.setProperty("right", 0);
+    } else {
+      socialMenu.style.setProperty("right", `-35px`);
     }
   });
 }

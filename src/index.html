@@ -68,8 +68,14 @@
                 <section class="projects" id="projects">
                     <h2>Projects</h2>
                     <hr>
-                    <p>I am constantly learning new software and skills. My past experience is in Java, HTML, CSS, and
-                        Javascript. I’m currently learning specific Javascript frameworks such as React and Angular.</p>
+                    <div class="projects-text">
+                        <p>I am constantly learning new software and skills. My past experience is in Java, HTML, CSS,
+                            and Javascript. I’m currently learning specific Javascript frameworks such as React and
+                            Angular.
+                        </p>
+
+                    </div>
+
                     <div class="projects-container">
                         <div class="projects-row1">
                             <div class="project-circle">
@@ -106,9 +112,10 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="projects-row2"></div>
-
+                        <!-- <div class="projects-row2"></div> -->
                     </div>
+                    <a href="./pages/resume.html" class="resume-link">Click here to see my resume&nbsp;&nbsp;<i
+                            class="fas fa-arrow-right"></i></a>
                 </section>
                 <section class="my-art" id="my-art">
                     <h2>My Art</h2>
@@ -161,14 +168,18 @@
                 <section class="contact" id="contact">
                     <h2>Contact Me</h2>
                     <hr>
-                    <form action="mailto:kkrnakasone@gmail.com" method="POST" enctype="multipart/form-data"
-                        name="email-form">
-                        <label for="email">Your email address</label>
-                        <input type="email" class="form-email" id="form-email" required>
-                        <label for="subject">Subject</label>
-                        <input type="text" name="subject" class="form-subject" id="form-subject">
-                        <textarea name="message" id="form-message" rows="5" maxlength="3000" required></textarea>
-                        <input type="submit" name="submit" class="form-submit" id="form-submit">
+                    <div class="contact-text">
+                        <p>Thank you for making it this far. If you would like to contact me, please send me an email
+                            using this form.</p>
+                    </div>
+                    <form action="email-form.php" method="POST" enctype="multipart/form-data" name="email-form">
+                        <input type="email" placeholder="EMAIL" class="form-email" id="form-email" name="email"
+                            required>
+                        <input type="text" placeholder="SUBJECT" name="subject" class="form-subject" id="form-subject"
+                            name="subject">
+                        <textarea name="message" placeholder="MESSAGE" id="form-message" rows="5"
+                            maxlength="3000"></textarea>
+                        <input type="submit" value="Send" class="form-submit" id="form-submit" name="submit">
                     </form>
                 </section>
             </div>

@@ -27,6 +27,7 @@ $large-text-size: 3.5em;
 html {
   background-color: #F6F0EC;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 body {
@@ -221,7 +222,7 @@ $navbar-height: 8vh;
 //Navigation Bar
 div.navbar {
   background: #F8EDE6;
-  opacity: 0.8;
+  opacity: 0.95;
   color: $main-bold-text-color;
   width: 100vw;
   filter: drop-shadow(0 4px 4px #cccccc);
@@ -264,12 +265,15 @@ div.navbar {
 }
 
 .social-menu {
+  //changed with js to show the social menu
+  position: fixed;
+  right: -35px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(248, 237, 230, 0.7);
-  position: sticky;
   top: 70vh;
   float: right;
   margin-right: 0px;
@@ -277,7 +281,7 @@ div.navbar {
   border-radius: 5px;
   filter: drop-shadow(-2px 2px 5px #c5c5c5);
   z-index: 998;
-  // @include box();
+  transition: all 0.5s ease;
 
   a {
     color: $main-text-color;
@@ -358,7 +362,7 @@ $content-width: 90%;
 .projects {
   @include section-settings();
 
-  p {
+  .projects-text {
     width: $content-width;
     display: flex;
     justify-content: center;
@@ -379,9 +383,11 @@ $content-width: 90%;
     width: $content-width;
   }
 
+  $circle-width: 10vw;
+
   .project-circle{
-    width: 150px;
-    height: 150px;
+    width: $circle-width;
+    height: 10vw;
     border-radius: 50%;
     background-color: $main-bold-text-color;
     position: relative;
@@ -404,30 +410,49 @@ $content-width: 90%;
   }
 
   .project-overlay {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
+    text-align: center;
     bottom: 0;
-    width: 200px;
+    width: $circle-width;
     height: 0;
-    background-color: rgba(255,255,255,0.5);
-    transition: .5s ease;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: .6s ease;
   }
 
   .project-overlay-text {
-    height: 150px;
-    width: 150px;
-    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    height: 70%;
+    width: 70%;
     text-align: center;
     color: $main-text-color;
     font-size: 12px;
+    opacity: 0;
+    // @include box();
   }
 
-  .project-circle:hover .project-overlay {
+  .project-circle:hover .project-overlay{
     height: 100%;
+    opacity: 0.6;
   }
 
   .project-circle:hover .project-title {
     opacity: 0;
+  }
+
+  .project-circle:hover .project-overlay-text {
+    opacity: 1;
+  }
+
+  .resume-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
 }
 
@@ -463,8 +488,8 @@ $content-width: 90%;
     }
 
     img {
-      width: 210px;
-      height: 210px;
+      width: 12vw;
+      height: 12vw;
       margin: 5px;
     }
   }
@@ -498,9 +523,57 @@ $content-width: 90%;
   }
 }
 
-.contact {
+section.contact {
   @include section-settings();
+
+  .contact-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: $content-width;
+    margin: 0 auto;
+  }
+
+  @mixin form-inputs {
+      width: 34vw;
+      background: none;
+      border-radius: 5px;
+      border: solid 1px $main-text-color;
+      padding: 10px;
+      font-size: 13px;
+      margin: 5px 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 36vw;
+    // padding: 1vh 1vw;
+    margin: 30px auto;
+    // border: solid 1px $main-text-color;
+    // border-radius: 10px;
+
+    input {
+      @include form-inputs();
+      height: 35px;
+    } 
+
+    .form-submit {
+      width: 100px;
+      margin: 5px auto ;
+      padding: 2px 0;
+    }
+
+    textarea {
+      @include form-inputs();
+      font-size: 15px;
+    }
+  }
 }
+
+
 
 ::-webkit-scrollbar {
   display: none;

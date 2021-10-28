@@ -11,6 +11,7 @@
 html {
   background-color: #F6F0EC;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 body {
@@ -213,7 +214,7 @@ a.landing-scroll-link {
 
 div.navbar {
   background: #F8EDE6;
-  opacity: 0.8;
+  opacity: 0.95;
   color: #001E4B;
   width: 100vw;
   -webkit-filter: drop-shadow(0 4px 4px #cccccc);
@@ -284,6 +285,8 @@ div.navbar .selected-section {
 }
 
 .social-menu {
+  position: fixed;
+  right: -35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,8 +301,6 @@ div.navbar .selected-section {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(248, 237, 230, 0.7);
-  position: -webkit-sticky;
-  position: sticky;
   top: 70vh;
   float: right;
   margin-right: 0px;
@@ -308,6 +309,8 @@ div.navbar .selected-section {
   -webkit-filter: drop-shadow(-2px 2px 5px #c5c5c5);
           filter: drop-shadow(-2px 2px 5px #c5c5c5);
   z-index: 998;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .social-menu a {
@@ -372,7 +375,7 @@ div.main .sections {
           flex-direction: column;
 }
 
-.projects p {
+.projects .projects-text {
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -407,8 +410,8 @@ div.main .sections {
 }
 
 .projects .project-circle {
-  width: 150px;
-  height: 150px;
+  width: 10vw;
+  height: 10vw;
   border-radius: 50%;
   background-color: #001E4B;
   position: relative;
@@ -438,31 +441,64 @@ div.main .sections {
 }
 
 .projects .project-overlay {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
+  text-align: center;
   bottom: 0;
-  width: 200px;
+  width: 10vw;
   height: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  background-color: white;
+  opacity: 0;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
 }
 
 .projects .project-overlay-text {
-  height: 150px;
-  width: 150px;
-  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70%;
+  width: 70%;
   text-align: center;
   color: #31476A;
   font-size: 12px;
+  opacity: 0;
 }
 
 .projects .project-circle:hover .project-overlay {
   height: 100%;
+  opacity: 0.6;
 }
 
 .projects .project-circle:hover .project-title {
   opacity: 0;
+}
+
+.projects .project-circle:hover .project-overlay-text {
+  opacity: 1;
+}
+
+.projects .resume-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .my-art {
@@ -524,8 +560,8 @@ div.main .sections {
 }
 
 .my-art .art-blocks img {
-  width: 210px;
-  height: 210px;
+  width: 12vw;
+  height: 12vw;
   margin: 5px;
 }
 
@@ -574,7 +610,7 @@ div.main .sections {
   width: auto;
 }
 
-.contact {
+section.contact {
   height: 100vh;
   width: 55vw;
   padding-top: 20vh;
@@ -585,6 +621,64 @@ div.main .sections {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+section.contact .contact-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+section.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  width: 36vw;
+  margin: 30px auto;
+}
+
+section.contact form input {
+  width: 34vw;
+  background: none;
+  border-radius: 5px;
+  border: solid 1px #31476A;
+  padding: 10px;
+  font-size: 13px;
+  margin: 5px 0;
+  height: 35px;
+}
+
+section.contact form .form-submit {
+  width: 100px;
+  margin: 5px auto;
+  padding: 2px 0;
+}
+
+section.contact form textarea {
+  width: 34vw;
+  background: none;
+  border-radius: 5px;
+  border: solid 1px #31476A;
+  padding: 10px;
+  font-size: 13px;
+  margin: 5px 0;
+  font-size: 15px;
 }
 
 ::-webkit-scrollbar {
