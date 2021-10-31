@@ -16,7 +16,7 @@
 
 <body>
     <div class="page-container" id="page-container">
-        <div class="landing" id="landing">
+        <div class="landing" id="landing" id="fullpage-scroll">
             <div id="landing-main-text">
                 <h1 class="main-text">welcome, my name is<br><span class="bold-name">Kelsie Nakasone<span
                             class="heading-period">.</span></span><br>I'm an
@@ -41,31 +41,39 @@
         </div>
         <div class="main" id="main">
             <div class="navbar" id="navbar">
-                <div class="left-nav-item-container">
-                    <a href="#projects" class="navbar-link" data-page="projects">Projects</a>
-                    <a href="#my-art" class="navbar-link" data-page="my-art">My Art</a>
+                <div class="left-nav-container">
+                    <a href="#projects" id="projects-link" class="navbar-link" data-page="projects">Projects</a>
+                    <a href="#my-art" id="my-art-link" class="navbar-link" data-page="my-art">My Art</a>
                 </div>
                 <div class="nav-header">
-                    <h1 class="nav-header-text">
-                        Kelsie Nakasone
-                    </h1>
+                    <a href="#landing" id="landing-link">
+                        <h1 class="nav-header-text">
+                            Kelsie Nakasone
+                        </h1>
+                    </a>
                 </div>
-                <div class="right-nav-item-container">
-                    <a href="#about" class="navbar-link" data-page="about">About</a>
-                    <a href="#contact" class="navbar-button" data-page="contact">Contact Me</a>
+                <div class="right-nav-container">
+                    <a href="#about" id="about-link" class="navbar-link" data-page="about">About</a>
+                    <a href="#contact" id="contact-link" class="navbar-button" data-page="contact">Contact Me</a>
+                </div>
+                <div class="hamburger-toggle">
+                    <div class="top"></div>
+                    <div class="middle"></div>
+                    <div class="bottom"></div>
                 </div>
                 <div class="selected-section"></div>
             </div>
             <div class="social-menu">
-                <a href="https://www.instagram.com/bykeistudio/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:kkrnakasone@gmail.com"><i class="far fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/kelsie-nakasone-20687013a/" target="_blank"><i
                         class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/knakasone" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://codepen.io/knakasone" target="_blank"><i class="fab fa-codepen"></i></a>
-                <a href="mailto:kkrnakasone@gmail.com"><i class="far fa-envelope"></i></a>
+                <a href="https://www.instagram.com/bykeistudio/" target="_blank"><i class="fab fa-instagram"></i></a>
+
             </div>
             <div class="sections" id="sections">
-                <section class="projects" id="projects">
+                <section class="projects" id="projects" id="fullpage-scroll">
                     <h2>Projects</h2>
                     <hr>
                     <div class="projects-text">
@@ -73,13 +81,12 @@
                             and Javascript. I’m currently learning specific Javascript frameworks such as React and
                             Angular.
                         </p>
-
                     </div>
 
                     <div class="projects-container">
                         <div class="projects-row1">
                             <div class="project-circle">
-                                <a href="portfolio.html">
+                                <a href="./pages/portfolio.html">
                                     <div class="project-title">Portfolio website</div>
                                     <div class="project-overlay">
                                         <div class="project-overlay-text">
@@ -114,10 +121,10 @@
                         </div>
                         <!-- <div class="projects-row2"></div> -->
                     </div>
-                    <a href="./pages/resume.html" class="resume-link">Click here to see my resume&nbsp;&nbsp;<i
+                    <a href="./pages/resume.html" class="resume-link">Check out my resume&nbsp;&nbsp;<i
                             class="fas fa-arrow-right"></i></a>
                 </section>
-                <section class="my-art" id="my-art">
+                <section class="my-art" id="my-art" id="fullpage-scroll">
                     <h2>My Art</h2>
                     <hr>
                     <p>While I do love design and typography, my favorite form of art is illustration. I love the
@@ -125,20 +132,23 @@
                         my subjects playful and cute since I want my art to bring joy in to the world. </p>
                     <div class="art-blocks">
                         <div class="art-blocks-row1">
-                            <img src="/images/instagram/rainbleh.jpg" alt="">
-                            <img src="/images/instagram/sketchbook.jpg" alt="">
-                            <img src="/images/instagram/iceberg.jpg" alt="">
-                            <img src="/images/instagram/fruit.jpg" alt="">
+                            <img src="images/instagram/rainbleh.jpg" alt="">
+                            <img src="images/instagram/sketchbook.jpg" alt="">
+                            <img src="images/instagram/iceberg.jpg" alt="">
+                            <img src="images/instagram/fruit.jpg" alt="">
                         </div>
                         <div class="art-blocks-row2">
-                            <img src="/images/instagram/mochi.jpg" alt="">
-                            <img src="/images/instagram/rainbow.jpg" alt="">
-                            <img src="/images/instagram/ramen.jpg" alt="">
-                            <img src="/images/instagram/cottoncandy.jpg" alt="">
+                            <img src="images/instagram/mochi.jpg" alt="">
+                            <img src="images/instagram/rainbow.jpg" alt="">
+                            <img src="images/instagram/ramen.jpg" alt="">
+                            <img src="images/instagram/cottoncandy.jpg" alt="">
                         </div>
                     </div>
+                    <a href="https://www.instagram.com/bykeistudio/" class="insta-link" target="_blank">Check out my
+                        instagram
+                        &nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
                 </section>
-                <section class="about" id="about">
+                <section class="about" id="about" id="fullpage-scroll">
                     <h2>About</h2>
                     <hr>
                     <div class="about-content">
@@ -146,9 +156,11 @@
                             <p> I grew up in and am currently based in Southern California. I went to college at
                                 Northeastern University in Boston, MA and graduated with a degree in Computer
                                 Engineering in 2020. During college, I worked multiple coops (6 month full-time
-                                positions). I worked in Information Technology at Harvard Kennedy School and then
-                                Bluewave Solar, I determined that Information Technology was not a career that I wanted
-                                to pursue.
+                                positions). I worked in Information Technology at <a href="https://www.hks.harvard.edu/"
+                                    target="_blank">Harvard Kennedy School</a> and then <a
+                                    href="https://bluewave.energy/" target="_blank">Bluewave Solar</a>, I determined
+                                that Information
+                                Technology was not a career that I wanted to pursue.
                             </p>
                             <br>
                             <p>
@@ -162,32 +174,42 @@
 
                         </div>
 
-                        <img src="/images/kelsieNakasone-about.jpg" alt="Image of Kelsie Nakasone">
+                        <img src="images/kelsieNakasone-about.jpg" alt="Image of Kelsie Nakasone">
                     </div>
                 </section>
-                <section class="contact" id="contact">
+                <section class="contact" id="contact" id="fullpage-scroll">
                     <h2>Contact Me</h2>
                     <hr>
                     <div class="contact-text">
-                        <p>Thank you for making it this far. If you would like to contact me, please send me an email
-                            using this form.</p>
+                        <p>Thank you for making it this far. If you would like to contact me, please send me an email.
+                            Below are also additional ways to contact me</p>
                     </div>
-                    <form action="email-form.php" method="POST" enctype="multipart/form-data" name="email-form">
-                        <input type="email" placeholder="EMAIL" class="form-email" id="form-email" name="email"
-                            required>
-                        <input type="text" placeholder="SUBJECT" name="subject" class="form-subject" id="form-subject"
-                            name="subject">
-                        <textarea name="message" placeholder="MESSAGE" id="form-message" rows="5"
-                            maxlength="3000"></textarea>
-                        <input type="submit" value="Send" class="form-submit" id="form-submit" name="submit">
-                    </form>
+                    <a href="./pages/resume.html" class="resume-link">Check out my resume&nbsp;&nbsp;<i
+                            class="fas fa-arrow-right"></i></a>
+                    <div class="contact-social-links">
+                        <a href="mailto:kkrnakasone@gmail.com"><i class="far fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/kelsie-nakasone-20687013a/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/knakasone" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://codepen.io/knakasone" target="_blank"><i class="fab fa-codepen"></i></a>
+                        <a href="https://www.instagram.com/bykeistudio/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
                 </section>
             </div>
-
+            <div class="background-shapes">
+                <div class="blue1"></div>
+                <div class="red2"></div>
+                <div class="yellow3 "></div>
+                <div class="red4"></div>
+                <div class="yellow5"></div>
+                <div class="blue6"></div>
+            </div>
         </div>
     </div>
 </body>
-
-<script src="js/smooth-scroll.js"></script>
+<script src="./js/mobile-menu.js"></script>
+<script src="./js/smooth-scroll.js"></script>
+<!-- <script src="./js/fullpage-scroll.js"></script> -->
 
 </html>
