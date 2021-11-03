@@ -138,8 +138,6 @@ a.italic-text {
   }
 }
 
-
-
 @mixin shape-defaults() {
   opacity: 0.5;
   filter: blur(4em);
@@ -151,7 +149,6 @@ $red-shape-color: #FF7E76;
 $yellow-shape-color: #EDAA6C;
 
 // Landing page background shapes
-
 .background-shapes {
   position: fixed;
   height: 100vh;
@@ -275,7 +272,7 @@ $navbar-height: 70px;
     width: 15%;
     margin-top: 20px;
     font-family: $sub-header-font;
-    font-size: 18px;
+    font-size: 1.2em;
     font-weight: 900;
     letter-spacing: 1px;
 }
@@ -294,6 +291,7 @@ div.navbar {
   margin-top: auto;
   position: sticky;
   top: 0;
+  font-size: 0.9em;
   z-index: 999;
 
   a {
@@ -316,8 +314,7 @@ div.navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding: 0 15%;
     font-family: $header-font;
   }
 
@@ -327,9 +324,35 @@ div.navbar {
     border-bottom: solid 2px $main-bold-text-color;
     transition: $five-transition;
   }
+
+  div.hamburger-toggle {
+    visibility: hidden;
+  }
 }
 
+//Responsive styles for the Navbar inlcuding togle hamburger mobile menu
 @media screen and (max-width: 1560px) {
+  div.navbar {
+    div.nav-header {
+      // padding: 0 15%;
+      margin: 0;
+      // @include box();
+    }
+
+    div.left-nav-container, 
+  div.right-nav-container {
+    width: 20%;
+  }
+  
+    .nav-header-text {
+      font-size: 1.5em;
+    }
+  
+    a {
+      font-size: 15px;
+    }
+  }
+  
 }
 
 @media screen and (max-width: 983px) {
@@ -347,32 +370,28 @@ div.navbar {
       // @include box();
     }
 
-    h1.nav-header-text {
-      font-size: 25px;
-      
-    }
-
     div.hamburger-toggle {
+      visibility: visible;
       position: absolute;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       right: 20px;
       margin: 0;
-      height: 30px;
+      height: 27px;
       
       // @include box();
       div {
-        height: 4px;
+        height: 3.5px;
         width: 30px;
-        background-color: white;
+        background-color: $main-bold-text-color;
         transition: $five-transition;
       }
 
       &:hover {
         cursor: pointer;
         div {
-          background-color: $main-text-color;
+          background-color: white;
         }
       }
     }
@@ -452,10 +471,24 @@ div.navbar {
   }
 }
 
+//Responsive settings for social menu
+@media screen and (max-width: 1560px) {
+
+  
+}
+
+@media screen and (max-width: 983px) {
+  .social-menu {
+    visibility: hidden;
+  }
+}
+
 $section-width: 55vw;
 
 @mixin section-settings {
-  height: 100vh;
+  position: relative;
+  min-height: 100vh;
+  box-sizing: content-box;
   width: $section-width;
   padding-top: 20vh;
   display: flex;
@@ -494,6 +527,21 @@ div.main {
   }
 }
 
+//Responsive styles for overall main section
+@media screen and (max-width: 1560px) {
+  div.main {
+    h2 {
+      font-size: 1.5em;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+  
+}
+@media screen and (max-width: 983px) {
+}
+
 $content-width: 90%;
 
 .projects {
@@ -525,7 +573,7 @@ $content-width: 90%;
 
   .project-circle{
     width: $circle-width;
-    height: 10vw;
+    height: $circle-width;
     border-radius: 50%;
     // background-color: $main-bold-text-color;
     border: solid 2px $main-bold-text-color;
@@ -596,6 +644,49 @@ $content-width: 90%;
 
 
 }
+$mid-section-width: 70vw;
+//Responsive styles for projects section
+@media screen and (max-width: 1560px) {
+  
+  .projects {
+    width: $mid-section-width;
+    // padding-top: 12vh;
+    // height: 60vh;
+
+    .projects-row1 {
+      justify-content: space-between;
+    }
+    .project-circle {
+      width: 13vw;
+      height: 13vw;
+    }
+    .project-title {
+      font-size: 90%;
+    }
+    .project-overlay {
+      width: 16vw;
+    }
+  }
+  
+}
+$min-section-width: 80vw;
+$min-top-padding: 10vh;
+@media screen and (max-width: 983px) {
+  .projects {
+    width: $min-section-width;
+    padding-top: $min-top-padding;
+    .project-circle{
+      width: 20vw;
+      height: 20vw;
+    }
+    .project-title {
+      font-size: 80%
+    }
+    .project-overlay {
+      width: 20vw;
+    }
+  }
+}
 
 .my-art {
   @include section-settings();
@@ -614,33 +705,84 @@ $content-width: 90%;
     justify-content: space-around;
     align-items: center;
     width: $section-width;
-    margin: 30px 0;
-    padding: 0;
+    margin: 30px auto;
+    // @include box();
     
 
-    .art-blocks-row1 .art-blocks-row2 {
-      margin: 0;
+    .art-blocks-row1, .art-blocks-row2 {
+      margin: 0 auto;
       padding: 0;
       display: flex;
       flex-wrap: nowrap;
       justify-content: center;
       width: $section-width;
-      border: solid 5px black;
+      margin: 0.5vw 0;
     }
 
     img {
       width: 12vw;
       height: 12vw;
-      margin: 5px;
+      margin: 0 0.5vw;
     }
   }
 
   .insta-link {
-    // position: relative;
-    // right: 0;
+    font-size: 0.8em;
     margin: 0 0 0 40vw;
   }
 }
+
+//Responsive styles for projects section
+@media screen and (max-width: 1560px) {
+  .my-art {
+    width: $mid-section-width;
+    // padding-top: 15vh;
+    .art-blocks {
+      width: $mid-section-width;
+      img {
+        width: 13vw;
+        height: 13vw;
+      }
+    }
+    .insta-link {
+      margin: 0 0 0 46vw;
+    }
+  }
+  
+}
+
+@media screen and (max-width: 983px) {
+  .my-art{
+    width: $min-section-width;
+    padding-top: $min-top-padding;
+
+    .art-blocks {
+      width: $min-section-width;
+      position: relative;
+      
+      .art-blocks-row1, .art-blocks-row2 {
+        width: $min-section-width;
+        flex-direction: column;
+        flex-flow: row wrap;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0;
+      }
+
+      img {
+        width: 30vw;
+        height: 30vw;
+        margin-top: 1vw;
+      }
+  }
+  
+}
+.insta-link {
+  margin: 0 0 0 50vw;
+  font: 1em;
+}
+}
+
 
 .about {
   @include section-settings();
@@ -675,7 +817,50 @@ $content-width: 90%;
   }
 }
 
-section.contact {
+//Responsive styles for projects section
+@media screen and (max-width: 1560px) {
+  .about {
+    width: $mid-section-width;
+  }
+
+  
+}
+
+@media screen and (max-width: 983px) {
+  .about {
+    width: $min-section-width;
+    padding-top: $min-top-padding;
+    .about-content {
+      flex-direction: column;
+
+      .about-text {
+        width: 60vw;
+        margin: 0 auto;
+        
+      }
+    
+      p {
+        text-indent: 40px;
+        text-align: justify;
+      }
+    
+      a {
+        color: $hover-color;
+      }
+    
+      img {
+        height: 40vh;
+        margin-top: 4vh;
+        width: auto;
+      }
+      
+    }
+    
+    // @include box();
+  }
+}
+
+.contact {
   @include section-settings();
 
   .contact-text {
@@ -719,12 +904,50 @@ section.contact {
 
  }
 
- //main section background shapes
- .blue1 {
-   @include shape-defaults();
-   background-color: $blue-shape-color;
- }
+ .resume-link {
+  margin-top: 4vh;
+}
 
+}
+
+//Responsive styles for projects section
+@media screen and (max-width: 1560px) {
+  .contact {
+    width: $mid-section-width;
+
+    .contact-social-links {
+      width: 50vw;
+    }
+  }
+
+  .resume-link {
+    transform: scale(0.85);
+  }
+  
+}
+
+@media screen and (max-width: 983px) {
+  .contact {
+    width: $min-section-width;
+    padding-top: 20vh;
+    height: 20vh;
+
+    .contact-social-links {
+      width: 70vw;
+      justify-content: space-between;
+      // flex-direction: ;
+      a {
+        width: 11vw;
+        height: 11vw;
+        font-size: 20px;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+  }
 }
 
 .resume-link {

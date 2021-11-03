@@ -51,7 +51,7 @@ sections.forEach((section) => {
 //Smooth scrolls to the selected section when user selects from Navbar
 //also when user select "scroll down" on landing page
 
-console.log(document.querySelectorAll('a[href^="#"]'));
+// console.log(document.querySelectorAll('a[href^="#"]'));
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -72,7 +72,7 @@ window.addEventListener(
     const y = main.offsetTop;
     const contactY = contact.offsetTop;
 
-    console.log("windwow: " + window.pageYOffset);
+    // console.log("windwow: " + window.pageYOffset);
 
     //
 
@@ -85,8 +85,8 @@ window.addEventListener(
       // document.getElementById("landing").style.height = 0;
       // document.getElementById("landing").style.visibility = "hidden";
     } else if (location < y && location > y - 100) {
-      console.log("y: " + y);
-      console.log("y-50: " + (y - 50));
+      // console.log("y: " + y);
+      // console.log("y-50: " + (y - 50));
       window.scroll({
         top: y,
         behavior: "smooth",

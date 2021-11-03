@@ -6,13 +6,15 @@ const toggleTop = document.querySelector(".top");
 const toggleMiddle = document.querySelector(".middle");
 const toggleBottom = document.querySelector(".bottom");
 
+leftDropDown.style.display == "none";
+
 toggle.addEventListener("click", function () {
   if (leftDropDown.style.display == "none") {
     leftDropDown.style.display = "flex";
     rightDropDown.style.display = "flex";
-    toggleTop.style.transform = "translateY(10px) rotateZ(45deg)";
+    toggleTop.style.transform = "translateY(9px) rotateZ(45deg)";
     toggleMiddle.style.opacity = "0";
-    toggleBottom.style.transform = "translateY(-10px) rotateZ(-45deg)";
+    toggleBottom.style.transform = "translateY(-9px) rotateZ(-45deg)";
   } else {
     leftDropDown.style.display = "none";
     rightDropDown.style.display = "none";
