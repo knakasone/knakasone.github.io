@@ -361,13 +361,13 @@ div.navbar {
   div.navbar {
     width: 100vw;
     height: 50px;
-    // @include box();
+    
 
     div.nav-header {
       position: absolute;
       left: 0;
       padding: 0 5%;
-      // @include box();
+      
     }
 
     div.hamburger-toggle {
@@ -380,7 +380,7 @@ div.navbar {
       margin: 0;
       height: 27px;
       
-      // @include box();
+  
       div {
         height: 3.5px;
         width: 30px;
@@ -408,7 +408,6 @@ div.navbar {
       margin: 0;
       font-size: 15px;
       background-color: $navbar-color;
-      // @include box();
       transition: $five-transition;
       a {
         text-align: center;
@@ -440,7 +439,6 @@ div.navbar {
   //changed with js to show the social menu
   position: fixed;
   right: -45px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -553,7 +551,6 @@ $content-width: 90%;
     justify-content: center;
     text-align: center;
     margin: 0 auto; 
-    // color: $main-bold-text-color;
   }
 
   .projects-container {
@@ -575,7 +572,6 @@ $content-width: 90%;
     width: $circle-width;
     height: $circle-width;
     border-radius: 50%;
-    // background-color: $main-bold-text-color;
     border: solid 2px $main-bold-text-color;
     position: relative;
     overflow: hidden;
@@ -606,7 +602,6 @@ $content-width: 90%;
     bottom: 0;
     width: $circle-width;
     height: 0;
-    // background-color: rgb(255, 255, 255);
     background-color: $main-bold-text-color;
     opacity: 0;
     transition: $five-transition;
@@ -621,7 +616,6 @@ $content-width: 90%;
     color: white;
     font-size: 12px;
     opacity: 0;
-    // @include box();
   }
 
   .project-circle:hover {
