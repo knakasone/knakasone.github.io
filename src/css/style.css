@@ -994,6 +994,7 @@ div.main .sections {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #001E4B;
+  min-height: 65vh;
 }
 
 .contact p {
@@ -1111,7 +1112,9 @@ a.resume-link {
           align-items: center;
   margin: 10px auto;
   text-decoration: none;
+  font-family: "Petrona", serif;
   font-size: 15px;
+  letter-spacing: 1px;
   background-color: #001E4B;
   color: white;
   border-radius: 20px;

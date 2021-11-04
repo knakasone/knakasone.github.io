@@ -5,7 +5,7 @@ const socialMenu = document.querySelector(".social-menu");
 
 //set to 70%
 const options = {
-  threshold: 0.65,
+  threshold: 0.8,
 };
 
 //looking for sections when they enter the frame
@@ -32,22 +32,21 @@ function navCheck(entries) {
       selectedSection.style.setProperty("height", `${directions.height}px`);
       // console.log(className);
 
-      // if (className !== "contact") {
-      //   socialMenu.style.setProperty("right", 0);
-      // } else {
-      //   socialMenu.style.setProperty("right", `-45px`);
-      // }
+      if (className == "contact") {
+        socialMenu.style.setProperty("right", `-45px`);
+        console.log("hidden");
+      } else {
+        socialMenu.style.setProperty("right", 0);
+      }
+    } else {
+      socialMenu.style.setProperty("right", `-45px`);
     }
-    // else {
-    //   socialMenu.style.setProperty("right", `-45px`);
-    // }
   });
 }
 
 sections.forEach((section) => {
   observer.observe(section);
 });
-
 
 window.addEventListener(
   "scroll",

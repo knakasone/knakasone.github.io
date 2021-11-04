@@ -734,6 +734,7 @@ div.main {
 //Styles for contact section
 .contact {
   @include section-settings();
+  min-height: 65vh;
 
   .contact-text {
     display: flex;
@@ -827,7 +828,9 @@ a.resume-link {
   align-items: center;
   margin: 10px auto;
   text-decoration: none;
+  font-family: $sub-header-font;
   font-size: 15px;
+  letter-spacing: 1px;
   background-color: $main-bold-text-color;
   color: white;
   border-radius: 20px;
