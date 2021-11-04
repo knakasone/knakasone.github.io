@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shanti&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shanti&display=swap");
 .background-shapes {
   position: fixed;
   height: 100vh;
@@ -297,6 +304,9 @@ div.navbar a {
   padding: 5px 0;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
+  font-family: "Petrona", serif;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 div.navbar a:hover {
@@ -334,7 +344,12 @@ div.navbar div.nav-header {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 15%;
+}
+
+div.navbar div.nav-header .nav-header-text {
   font-family: "Playfair Display", serif;
+  letter-spacing: 0.5vw;
+  font-size: 1.7em;
 }
 
 div.navbar .selected-section {
@@ -353,12 +368,12 @@ div.navbar div.hamburger-toggle {
   div.navbar div.nav-header {
     margin: 0;
   }
+  div.navbar div.nav-header .nav-header-text {
+    font-size: 1.5em;
+  }
   div.navbar div.left-nav-container,
   div.navbar div.right-nav-container {
     width: 20%;
-  }
-  div.navbar .nav-header-text {
-    font-size: 1.5em;
   }
   div.navbar a {
     font-size: 15px;
@@ -559,6 +574,10 @@ div.main .sections {
   color: #001E4B;
 }
 
+.projects p {
+  font-family: "Nunito Sans", sans-serif;
+}
+
 .projects .projects-text {
   width: 90%;
   display: -webkit-box;
@@ -624,6 +643,8 @@ div.main .sections {
   color: #001E4B;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
+  font-family: "Petrona", serif;
+  font-weight: 700;
 }
 
 .projects .project-overlay {
@@ -648,6 +669,8 @@ div.main .sections {
 }
 
 .projects .project-overlay-text {
+  font-family: "Nunito Sans", sans-serif;
+  letter-spacing: 0.5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -658,7 +681,7 @@ div.main .sections {
   width: 70%;
   text-align: center;
   color: white;
-  font-size: 12px;
+  font-size: 11px;
   opacity: 0;
 }
 
@@ -685,6 +708,7 @@ div.main .sections {
 @media screen and (max-width: 1560px) {
   .projects {
     width: 70vw;
+    min-height: 60vh;
   }
   .projects .projects-row1 {
     -webkit-box-pack: justify;
@@ -699,7 +723,7 @@ div.main .sections {
     font-size: 90%;
   }
   .projects .project-overlay {
-    width: 16vw;
+    width: 13vw;
   }
 }
 
@@ -719,16 +743,16 @@ div.main .sections {
             flex-direction: column;
   }
   .projects .project-circle {
-    width: 28vw;
-    height: 28vw;
+    width: 25vw;
+    height: 25vw;
     margin: 2vh 0;
   }
   .projects .project-title {
     font-size: 80%;
   }
   .projects .project-overlay {
-    height: 28vw;
-    width: 28vw;
+    height: 25vw;
+    width: 25vw;
   }
 }
 
@@ -747,6 +771,10 @@ div.main .sections {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #001E4B;
+}
+
+.my-art p {
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .my-art p {
@@ -807,6 +835,7 @@ div.main .sections {
 @media screen and (max-width: 1560px) {
   .my-art {
     width: 70vw;
+    min-height: 70vh;
   }
   .my-art .art-blocks {
     width: 70vw;
@@ -873,6 +902,10 @@ div.main .sections {
   color: #001E4B;
 }
 
+.about p {
+  font-family: "Nunito Sans", sans-serif;
+}
+
 .about .about-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -912,6 +945,7 @@ div.main .sections {
 @media screen and (max-width: 1560px) {
   .about {
     width: 70vw;
+    min-height: 75vh;
   }
 }
 
@@ -960,6 +994,10 @@ div.main .sections {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #001E4B;
+}
+
+.contact p {
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .contact .contact-text {
@@ -1020,18 +1058,19 @@ div.main .sections {
           filter: drop-shadow(0 5px 10px #a3a3a3);
 }
 
-.contact .resume-link {
+.contact a.resume-link {
   margin-top: 4vh;
 }
 
 @media screen and (max-width: 1560px) {
   .contact {
     width: 70vw;
+    min-height: 60vh;
   }
   .contact .contact-social-links {
     width: 50vw;
   }
-  .resume-link {
+  a.resume-link {
     -webkit-transform: scale(0.85);
             transform: scale(0.85);
   }
@@ -1052,7 +1091,7 @@ div.main .sections {
   .contact .contact-social-links a {
     width: 12.5vw;
     height: 12.5vw;
-    font-size: 20px;
+    font-size: 130%;
   }
   .contact .contact-social-links a:hover {
     -webkit-transform: scale(1.1);
@@ -1060,7 +1099,7 @@ div.main .sections {
   }
 }
 
-.resume-link {
+a.resume-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1082,21 +1121,21 @@ div.main .sections {
   transition: all ease 0.5s;
 }
 
-.resume-link i {
+a.resume-link i {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
 }
 
-.resume-link:hover {
+a.resume-link:hover {
   text-decoration: none;
 }
 
-.resume-link:hover i {
+a.resume-link:hover i {
   -webkit-transform: translateX(10px);
           transform: translateX(10px);
 }
 
-.resume-link:visited {
+a.resume-link:visited {
   color: white;
 }
 

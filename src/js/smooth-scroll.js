@@ -48,20 +48,6 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
-//Smooth scrolls to the selected section when user selects from Navbar
-//also when user select "scroll down" on landing page
-
-// console.log(document.querySelectorAll('a[href^="#"]'));
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    // console.log(this.getAttribute("href"));
-    // console.log(document.querySelector(this.getAttribute("href")));
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
 
 window.addEventListener(
   "scroll",
@@ -78,20 +64,20 @@ window.addEventListener(
     //   landingBool = true;
     // }
 
-    if (location > 15 && location < 100) {
-      // landingBool = true;
-      window.scroll({
-        top: y,
-        behavior: "smooth",
-      });
+    // if (location > 15 && location < 100) {
+    //   // landingBool = true;
+    //   window.scroll({
+    //     top: y,
+    //     behavior: "smooth",
+    //   });
 
-    } else if (location < y && location > y - 100) {
-      // landingBool = true;
-      window.scroll({
-        top: y,
-        behavior: "smooth",
-      });
-    }
+    // } else if (location < y && location > y - 100) {
+    //   // landingBool = true;
+    //   window.scroll({
+    //     top: y,
+    //     behavior: "smooth",
+    //   });
+    // }
 
     //Hide the social menu when the user is scrolled to the landing page or the contact page
     if (location > y - 100 && location < contactY - 50) {

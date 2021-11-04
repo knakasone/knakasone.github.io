@@ -181,7 +181,9 @@ div.navbar {
     color: $main-bold-text-color;
     padding: 5px 0;
     transition: $five-transition;
-
+    font-family: $sub-header-font;
+    font-weight: 800;
+    letter-spacing: 2px;
     &:hover {
       transform: translate(0, -5px);
     }
@@ -197,7 +199,12 @@ div.navbar {
     justify-content: center;
     align-items: center;
     padding: 0 15%;
-    font-family: $header-font;
+    .nav-header-text {
+      font-family: $header-font;
+      letter-spacing: 0.5vw;
+      font-size: 1.7em;
+    }
+    
   }
 
   .selected-section {
@@ -217,6 +224,9 @@ div.navbar {
   div.navbar {
     div.nav-header {
       margin: 0;
+      .nav-header-text {
+      font-size: 1.5em;
+    }
     }
 
     div.left-nav-container, 
@@ -224,9 +234,7 @@ div.navbar {
     width: 20%;
   }
   
-    .nav-header-text {
-      font-size: 1.5em;
-    }
+    
   
     a {
       font-size: 15px;
@@ -406,7 +414,6 @@ div.main {
 //Styles for projects section
 .projects {
   @include section-settings();
-
   .projects-text {
     width: $content-width;
     display: flex;
@@ -419,6 +426,7 @@ div.main {
     display: flex;
     justify-content: center;
     margin: 8vh 0;
+    
   }
 
   .projects-row1 {
@@ -451,6 +459,8 @@ div.main {
     width: 100%;
     color: $main-bold-text-color;
     transition: $five-transition;
+    font-family: $sub-header-font;
+    font-weight: 700;
   }
 
   .project-overlay {
@@ -468,13 +478,15 @@ div.main {
   }
 
   .project-overlay-text {
+    font-family: $body-font;
+    letter-spacing: 0.5px;
     display: flex;
     align-items: center;
     height: 70%;
     width: 70%;
     text-align: center;
     color: white;
-    font-size: 12px;
+    font-size: 11px;
     opacity: 0;
   }
 
@@ -502,19 +514,20 @@ div.main {
   
   .projects {
     width: $mid-section-width;
+    min-height: 60vh;
 
     .projects-row1 {
       justify-content: space-between;
     }
     .project-circle {
-      width: 13vw;
-      height: 13vw;
+      width: $mid-circle-dim;
+      height: $mid-circle-dim;
     }
     .project-title {
       font-size: 90%;
     }
     .project-overlay {
-      width: 16vw;
+      width: $mid-circle-dim;
     }
   }
   
@@ -599,7 +612,7 @@ div.main {
 @media screen and (max-width: 1560px) {
   .my-art {
     width: $mid-section-width;
-    // padding-top: 15vh;
+    min-height: 70vh;
     .art-blocks {
       width: $mid-section-width;
       img {
@@ -683,6 +696,7 @@ div.main {
 @media screen and (max-width: 1560px) {
   .about {
     width: $mid-section-width;
+    min-height: 75vh;
   }
 }
 @media screen and (max-width: 983px) {
@@ -759,10 +773,8 @@ div.main {
       filter: drop-shadow(0 5px 10px rgb(163, 163, 163));
     }
   }
-
  }
-
- .resume-link {
+ a.resume-link {
   margin-top: 4vh;
 }
 
@@ -772,13 +784,13 @@ div.main {
 @media screen and (max-width: 1560px) {
   .contact {
     width: $mid-section-width;
-
+    min-height: 60vh;
     .contact-social-links {
       width: 50vw;
     }
   }
 
-  .resume-link {
+  a.resume-link {
     transform: scale(0.85);
   }
   
@@ -797,7 +809,7 @@ div.main {
       a {
         width: 12.5vw;
         height: 12.5vw;
-        font-size: 20px;
+        font-size: 130%;
 
         &:hover {
           transform: scale(1.1);
@@ -809,7 +821,7 @@ div.main {
 }
 
 //Styles for resume link (appears in different sections in main section
-.resume-link {
+a.resume-link {
   display: flex;
   justify-content: center;
   align-items: center;

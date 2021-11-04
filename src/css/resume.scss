@@ -3,21 +3,115 @@
 @import './mixins.scss';
 
 * {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
   
 html {
-background-color: #F6F0EC;
-overflow-x: hidden;
-width: 100vw;
+    background-color: #F6F0EC;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 body {
-font-family: $header-font;
-margin: 0;
-padding: 0;
+    // font-family: $header-font;
+    color: $main-bold-text-color;
+    margin: 0;
+    padding: 0;
+}
+
+div.header {
+    font-family: $header-font;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+    padding: 4vh;
+    width: 75vw;
+    border-bottom: solid 2px $main-bold-text-color;
+    letter-spacing: 1vw;
+    h1 {
+        font-size: 1.7em;
+        font-weight: 800;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    width: 60vw;
+    margin: 2vh auto;
+    font-size: 0.95em;
+    font-family: $body-font;
+    h3 {
+        font-size: 1.3em;
+        letter-spacing: 0.5vw;
+        margin: 0 auto;
+        margin-bottom: 3vh;
+        font-family: $header-font;
+        font-weight: 800;
+    }
+    ul {
+        text-indent: 3vw;
+        list-style-position: inside;
+        padding: 2vh 0;
+    }
+}
+
+section.projects {
+    h4 {
+        font-size: 1em;
+        font-weight: 700;
+    }
+    p {
+        font-size: 0.9em;
+        font-style: italic;
+    }
+}
+
+section.work {
+    h4 {
+        font-size: 1em;
+        font-weight: 700;
+        margin-top: 1vh;
+    }
+    p {
+        font-size: 0.9em;
+    }
+    p.company {
+        font-size: 1em;
+        font-weight: 500;
+    }
+    p.date {
+        font-style: italic;
+    }
+}
+
+section.skills, section.education, section.contact {
+    justify-content: center;
+    align-items: center;
+}
+
+section.skills {
+    h3 {
+        margin-bottom: 2vh;
+    }
+    ul {
+        text-indent: 0;
+        list-style: none;
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+}
+
+hr {
+    height: 1px;
+    background-color: $main-bold-text-color;
+    border: none;
+    width: 35vw;
+    margin: 5vw auto;
 }
 
 a {
@@ -34,8 +128,4 @@ text-decoration: none;
 &:visited{
     color: $main-bold-text-color;
 }
-}
-
-.background-shapes {
-
 }
