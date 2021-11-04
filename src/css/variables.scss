@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+//Preset Colors
+$main-text-color: #31476A;
+$main-bold-text-color: #001E4B;
+$hover-color: #a5231f;
+
+//Preset Font-families
+$header-font: 'Playfair Display', serif;
+$scroll-font: 'Lora', serif;
+$sub-header-font: 'Petrona', serif;
+
+//Preset transitions
+$five-transition: all ease 0.5s;
+$three-transition: all ease 0.3;
+
+//Background Shape colors 
+$blue-shape-color: #7897D2;
+$red-shape-color: #FF7E76;
+$yellow-shape-color: #EDAA6C;
+
+//Navbar settings
+$navbar-height: 70px;
+$navbar-color: #F8EDE6;
+
+//Section settings
+$section-width: 55vw;
+$content-width: 90%;
+//Responsive section settings
+$mid-section-width: 70vw;
+$min-section-width: 80vw;
+$min-top-padding: 10vh;
+
+//Project section settings
+$project-circle-width: 10vw;
+//Responsive circle settings
+$min-circle-dim: 28vw;

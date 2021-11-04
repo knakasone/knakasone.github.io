@@ -1,30 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-//Preset Colors
-$main-text-color: #31476A;
-$main-bold-text-color: #001E4B;
-$hover-color: #a5231f;
-
-//Preset Fonts
-$header-font: 'Playfair Display', serif;
-$scroll-font: 'Lora', serif;
-$sub-header-font: 'Petrona', serif;
-
-//Preset transition
-$five-transition: all ease 0.5s;
-$three-transition: all ease 0.3;
-
-@mixin box {
-  border-style: solid;
-  border-width: 1px;
-  border-width: $main-bold-text-color;
-}
-
-$main-light-text: black;
-$large-text-size: 3.5em;
-
+@import './variables.scss';
+@import './mixins.scss';
+@import './background.scss';
 
 * {
   box-sizing: border-box;
@@ -138,86 +114,7 @@ a.italic-text {
   }
 }
 
-@mixin shape-defaults() {
-  opacity: 0.5;
-  filter: blur(4em);
-  position: absolute;
-  z-index: 1;
-}
-$blue-shape-color: #7897D2;
-$red-shape-color: #FF7E76;
-$yellow-shape-color: #EDAA6C;
-
-// Landing page background shapes
-.background-shapes {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  background: none;
-  z-index: -1;
-
-}
-
-.top-right-red {
-  height: 30vh;
-  width: 45vw;
-  background-color: $red-shape-color;
-  border-radius: 50% 30% 30% 60% / 60% 40% 80% 30%;
-  top: -8vh;
-  right: 8vw;
-  @include shape-defaults();
-}
-
-.top-right-blue {
-  height: 45vh;
-  width: 40vw;
-  background-color: $blue-shape-color;
-  border-radius: 83% 17% 57% 43% / 67% 66% 34% 33% ;
-  top: 10vh;
-  right: -17vw;
-  @include shape-defaults();
-}
-
-.top-right-yellow {
-  height: 30vh;
-  width: 25vw;
-  background-color: $yellow-shape-color;
-  border-radius: 52% 48% 47% 53% / 51% 46% 54% 49%  ;
-  top: 22vh;
-  right: 25vw;
-  @include shape-defaults();
-}
-
-.bottom-left-red {
-  height: 20vh;
-  width: 45vw;
-  background-color: $red-shape-color;
-  border-radius: 50% 30% 30% 60% / 60% 40% 80% 30%;
-  bottom: -5vh;
-  left: -10vw;
-  @include shape-defaults();
-}
-
-.bottom-left-blue {
-  height: 37vh;
-  width: 30vw;
-  background-color: $blue-shape-color;
-  border-radius: 83% 17% 57% 43% / 67% 66% 34% 33% ;
-  bottom: 20vh;
-  left: -13vw;
-  @include shape-defaults();
-}
-
-.bottom-left-yellow {
-  height: 28vh;
-  width: 30vw;
-  background-color: $yellow-shape-color;
-  border-radius: 82% 18% 76% 24% / 58% 22% 78% 42% ;
-  left: 22vw;
-  bottom: 15vh;
-  @include shape-defaults();
-}
-
+//Responsive settings for Landing page
 @media screen and (max-width: 1560px) {
   h1.main-text {
     font-size: 30px;
@@ -226,10 +123,8 @@ $yellow-shape-color: #EDAA6C;
   .bold-name {
     font-size: 45px;
     line-height: 70px;
-  }
-  
+  }  
 }
-
 @media screen and (max-width: 983px) {
   div.landing {
     display: flex;
@@ -251,6 +146,7 @@ $yellow-shape-color: #EDAA6C;
 
   .landing-scroll-text {
     font-size: 10px;
+    margin-bottom: 15vh;
   }
 }
 
@@ -264,20 +160,6 @@ $yellow-shape-color: #EDAA6C;
 }
 
 //Navigation Bar
-$navbar-height: 70px;
-@mixin navbar-text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 15%;
-    margin-top: 20px;
-    font-family: $sub-header-font;
-    font-size: 1.2em;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-$navbar-color: #F8EDE6;
 div.navbar {
   background: $navbar-color;
   opacity: 0.95;
@@ -334,9 +216,7 @@ div.navbar {
 @media screen and (max-width: 1560px) {
   div.navbar {
     div.nav-header {
-      // padding: 0 15%;
       margin: 0;
-      // @include box();
     }
 
     div.left-nav-container, 
@@ -355,6 +235,7 @@ div.navbar {
   
 }
 
+//Responsive settings for Navbar
 @media screen and (max-width: 983px) {
   $mobile-navbar-height: 50px;
   
@@ -435,8 +316,9 @@ div.navbar {
   
 }
 
+//Styles for social media/contact menu on the side of the screen
 .social-menu {
-  //changed with js to show the social menu
+  //changed with js to show/hide the social menu
   position: fixed;
   right: -45px;
   display: flex;
@@ -469,31 +351,14 @@ div.navbar {
   }
 }
 
-//Responsive settings for social menu
-@media screen and (max-width: 1560px) {
-
-  
-}
-
+//Hide the side menu on mobile
 @media screen and (max-width: 983px) {
   .social-menu {
     visibility: hidden;
   }
 }
 
-$section-width: 55vw;
-
-@mixin section-settings {
-  position: relative;
-  min-height: 100vh;
-  box-sizing: content-box;
-  width: $section-width;
-  padding-top: 20vh;
-  display: flex;
-  flex-direction: column;
-  color: $main-bold-text-color;
-}
-
+//Overall main section styles
 div.main {
   width: 100vw;
 
@@ -534,14 +399,11 @@ div.main {
     p {
       font-size: 15px;
     }
-  }
-  
-}
-@media screen and (max-width: 983px) {
+  } 
 }
 
-$content-width: 90%;
 
+//Styles for projects section
 .projects {
   @include section-settings();
 
@@ -556,7 +418,7 @@ $content-width: 90%;
   .projects-container {
     display: flex;
     justify-content: center;
-    padding: 80px 0;
+    margin: 8vh 0;
   }
 
   .projects-row1 {
@@ -566,11 +428,9 @@ $content-width: 90%;
     width: $content-width;
   }
 
-  $circle-width: 10vw;
-
   .project-circle{
-    width: $circle-width;
-    height: $circle-width;
+    width: $project-circle-width;
+    height: $project-circle-width;
     border-radius: 50%;
     border: solid 2px $main-bold-text-color;
     position: relative;
@@ -600,7 +460,7 @@ $content-width: 90%;
     position: absolute;
     text-align: center;
     bottom: 0;
-    width: $circle-width;
+    width: $project-circle-width;
     height: 0;
     background-color: $main-bold-text-color;
     opacity: 0;
@@ -635,17 +495,13 @@ $content-width: 90%;
   .project-circle:hover .project-overlay-text {
     opacity: 1;
   }
-
-
 }
-$mid-section-width: 70vw;
+
 //Responsive styles for projects section
 @media screen and (max-width: 1560px) {
   
   .projects {
     width: $mid-section-width;
-    // padding-top: 12vh;
-    // height: 60vh;
 
     .projects-row1 {
       justify-content: space-between;
@@ -663,25 +519,38 @@ $mid-section-width: 70vw;
   }
   
 }
-$min-section-width: 80vw;
-$min-top-padding: 10vh;
 @media screen and (max-width: 983px) {
   .projects {
-    width: $min-section-width;
+    width: 85vw;
+    min-height: 80vh;
     padding-top: $min-top-padding;
-    .project-circle{
-      width: 20vw;
-      height: 20vw;
+
+    .projects-container {
+      margin: 3vh 0;
     }
+
+    .projects-row1 {
+      flex-direction: column;
+      // @include box();
+    }
+    
+    .project-circle{
+      width: $min-circle-dim;
+      height: $min-circle-dim;
+      margin: 2vh 0;
+    }
+
     .project-title {
       font-size: 80%
     }
     .project-overlay {
-      width: 20vw;
+      height: $min-circle-dim;
+      width: $min-circle-dim;
     }
   }
 }
 
+//Styles for My art section
 .my-art {
   @include section-settings();
 
@@ -726,7 +595,7 @@ $min-top-padding: 10vh;
   }
 }
 
-//Responsive styles for projects section
+//Responsive styles for my art section
 @media screen and (max-width: 1560px) {
   .my-art {
     width: $mid-section-width;
@@ -748,6 +617,7 @@ $min-top-padding: 10vh;
 @media screen and (max-width: 983px) {
   .my-art{
     width: $min-section-width;
+    min-height: 115vh;
     padding-top: $min-top-padding;
 
     .art-blocks {
@@ -764,8 +634,8 @@ $min-top-padding: 10vh;
       }
 
       img {
-        width: 30vw;
-        height: 30vw;
+        width: 36vw;
+        height: 36vw;
         margin-top: 1vw;
       }
   }
@@ -777,7 +647,7 @@ $min-top-padding: 10vh;
 }
 }
 
-
+//Styles for about section
 .about {
   @include section-settings();
 
@@ -787,12 +657,10 @@ $min-top-padding: 10vh;
     justify-content: center;
     align-items: center;
     margin: 5vh 5vw 0vh 5vw;
-    
 
     .about-text {
       width: 35vw;
-      margin-right: 5vw;
-      
+      margin-right: 5vw; 
     }
 
     p {
@@ -816,21 +684,18 @@ $min-top-padding: 10vh;
   .about {
     width: $mid-section-width;
   }
-
-  
 }
-
 @media screen and (max-width: 983px) {
   .about {
     width: $min-section-width;
     padding-top: $min-top-padding;
     .about-content {
       flex-direction: column;
+      margin-bottom: 0;
 
       .about-text {
         width: 60vw;
         margin: 0 auto;
-        
       }
     
       p {
@@ -849,11 +714,10 @@ $min-top-padding: 10vh;
       }
       
     }
-    
-    // @include box();
   }
 }
 
+//Styles for contact section
 .contact {
   @include section-settings();
 
@@ -923,16 +787,16 @@ $min-top-padding: 10vh;
 @media screen and (max-width: 983px) {
   .contact {
     width: $min-section-width;
-    padding-top: 20vh;
-    height: 20vh;
+    padding-top: $min-top-padding;
+    min-height: 50vh;
 
     .contact-social-links {
       width: 70vw;
       justify-content: space-between;
       // flex-direction: ;
       a {
-        width: 11vw;
-        height: 11vw;
+        width: 12.5vw;
+        height: 12.5vw;
         font-size: 20px;
 
         &:hover {
@@ -944,6 +808,7 @@ $min-top-padding: 10vh;
   }
 }
 
+//Styles for resume link (appears in different sections in main section
 .resume-link {
   display: flex;
   justify-content: center;
@@ -951,7 +816,6 @@ $min-top-padding: 10vh;
   margin: 10px auto;
   text-decoration: none;
   font-size: 15px;
-  // border: solid 2px $main-bold-text-color;
   background-color: $main-bold-text-color;
   color: white;
   border-radius: 20px;

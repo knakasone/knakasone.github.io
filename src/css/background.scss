@@ -1,0 +1,79 @@
+@import './variables.scss';
+
+//Background Shape defaults
+@mixin shape-defaults() {
+  opacity: 0.65;
+  filter: blur(4em);
+  position: absolute;
+  z-index: 1;
+}
+
+// Landing page background shapes
+.background-shapes {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: none;
+    z-index: -1;
+  // opacity: 0;
+  
+  .top-right-red {
+    height: 30vh;
+    width: 45vw;
+    background-color: $red-shape-color;
+    border-radius: 50% 30% 30% 60% / 60% 40% 80% 30%;
+    top: -8vh;
+    right: 8vw;
+    @include shape-defaults();
+  }
+  
+  .top-right-blue {
+    height: 45vh;
+    width: 40vw;
+    background-color: $blue-shape-color;
+    border-radius: 83% 17% 57% 43% / 67% 66% 34% 33% ;
+    top: 10vh;
+    right: -17vw;
+    @include shape-defaults();
+  }
+  
+  .top-right-yellow {
+    height: 30vh;
+    width: 25vw;
+    background-color: $yellow-shape-color;
+    border-radius: 52% 48% 47% 53% / 51% 46% 54% 49%  ;
+    top: 22vh;
+    right: 25vw;
+    @include shape-defaults();
+  }
+  
+  .bottom-left-red {
+    height: 20vh;
+    width: 45vw;
+    background-color: $red-shape-color;
+    border-radius: 50% 30% 30% 60% / 60% 40% 80% 30%;
+    bottom: -5vh;
+    left: -10vw;
+    @include shape-defaults();
+  }
+  
+  .bottom-left-blue {
+    height: 37vh;
+    width: 30vw;
+    background-color: $blue-shape-color;
+    border-radius: 83% 17% 57% 43% / 67% 66% 34% 33% ;
+    bottom: 20vh;
+    left: -13vw;
+    @include shape-defaults();
+  }
+  
+  .bottom-left-yellow {
+    height: 28vh;
+    width: 30vw;
+    background-color: $yellow-shape-color;
+    border-radius: 82% 18% 76% 24% / 58% 22% 78% 42% ;
+    left: 22vw;
+    bottom: 15vh;
+    @include shape-defaults();
+  }
+}

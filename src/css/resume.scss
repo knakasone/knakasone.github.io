@@ -1,0 +1,41 @@
+@import './background.scss';
+@import './variables.scss';
+@import './mixins.scss';
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+  
+html {
+background-color: #F6F0EC;
+overflow-x: hidden;
+width: 100vw;
+}
+
+body {
+font-family: $header-font;
+margin: 0;
+padding: 0;
+}
+
+a {
+text-decoration: none;
+&:link {
+    color: $main-bold-text-color;
+    &:visited {
+    color: $main-text-color;
+    }
+}
+&:hover {
+    text-decoration: underline;
+}
+&:visited{
+    color: $main-bold-text-color;
+}
+}
+
+.background-shapes {
+
+}

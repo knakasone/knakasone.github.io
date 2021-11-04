@@ -72,27 +72,28 @@ window.addEventListener(
     const y = main.offsetTop;
     const contactY = contact.offsetTop;
 
-    // console.log("windwow: " + window.pageYOffset);
+    // var landingBool = false;
 
-    //
+    // if (location > 15 && location < y - 15) {
+    //   landingBool = true;
+    // }
 
     if (location > 15 && location < 100) {
+      // landingBool = true;
       window.scroll({
         top: y,
         behavior: "smooth",
       });
 
-      // document.getElementById("landing").style.height = 0;
-      // document.getElementById("landing").style.visibility = "hidden";
     } else if (location < y && location > y - 100) {
-      // console.log("y: " + y);
-      // console.log("y-50: " + (y - 50));
+      // landingBool = true;
       window.scroll({
         top: y,
         behavior: "smooth",
       });
     }
 
+    //Hide the social menu when the user is scrolled to the landing page or the contact page
     if (location > y - 100 && location < contactY - 50) {
       socialMenu.style.setProperty("right", 0);
     } else {
@@ -101,6 +102,14 @@ window.addEventListener(
   },
   false
 );
+
+// if (landingBool) {
+//   window.scroll({
+//     top: y,
+//     behavior: "smooth",
+//   });
+//   landingBool = false;
+// }
 
 // $(window).scroll(example);
 

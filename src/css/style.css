@@ -1,6 +1,98 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.background-shapes {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: none;
+  z-index: -1;
+}
+
+.background-shapes .top-right-red {
+  height: 30vh;
+  width: 45vw;
+  background-color: #FF7E76;
+  border-radius: 50% 30% 30% 60% / 60% 40% 80% 30%;
+  top: -8vh;
+  right: 8vw;
+  opacity: 0.65;
+  -webkit-filter: blur(4em);
+          filter: blur(4em);
+  position: absolute;
+  z-index: 1;
+}
+
+.background-shapes .top-right-blue {
+  height: 45vh;
+  width: 40vw;
+  background-color: #7897D2;
+  border-radius: 83% 17% 57% 43% / 67% 66% 34% 33%;
+  top: 10vh;
+  right: -17vw;
+  opacity: 0.65;
+  -webkit-filter: blur(4em);
+          filter: blur(4em);
+  position: absolute;
+  z-index: 1;
+}
+
+.background-shapes .top-right-yellow {
+  height: 30vh;
+  width: 25vw;
+  background-color: #EDAA6C;
+  border-radius: 52% 48% 47% 53% / 51% 46% 54% 49%;
+  top: 22vh;
+  right: 25vw;
+  opacity: 0.65;
+  -webkit-filter: blur(4em);
+          filter: blur(4em);
+  position: absolute;
+  z-index: 1;
+}
+
+.background-shapes .bottom-left-red {
+  height: 20vh;
+  width: 45vw;
+  background-color: #FF7E76;
+  border-radius: 50% 30% 30% 60% / 60% 40% 80% 30%;
+  bottom: -5vh;
+  left: -10vw;
+  opacity: 0.65;
+  -webkit-filter: blur(4em);
+          filter: blur(4em);
+  position: absolute;
+  z-index: 1;
+}
+
+.background-shapes .bottom-left-blue {
+  height: 37vh;
+  width: 30vw;
+  background-color: #7897D2;
+  border-radius: 83% 17% 57% 43% / 67% 66% 34% 33%;
+  bottom: 20vh;
+  left: -13vw;
+  opacity: 0.65;
+  -webkit-filter: blur(4em);
+          filter: blur(4em);
+  position: absolute;
+  z-index: 1;
+}
+
+.background-shapes .bottom-left-yellow {
+  height: 28vh;
+  width: 30vw;
+  background-color: #EDAA6C;
+  border-radius: 82% 18% 76% 24% / 58% 22% 78% 42%;
+  left: 22vw;
+  bottom: 15vh;
+  opacity: 0.65;
+  -webkit-filter: blur(4em);
+          filter: blur(4em);
+  position: absolute;
+  z-index: 1;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -125,98 +217,6 @@ a.italic-text:hover {
   color: #31476A;
 }
 
-.background-shapes {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  background: none;
-  z-index: -1;
-}
-
-.top-right-red {
-  height: 30vh;
-  width: 45vw;
-  background-color: #FF7E76;
-  border-radius: 50% 30% 30% 60% / 60% 40% 80% 30%;
-  top: -8vh;
-  right: 8vw;
-  opacity: 0.5;
-  -webkit-filter: blur(4em);
-          filter: blur(4em);
-  position: absolute;
-  z-index: 1;
-}
-
-.top-right-blue {
-  height: 45vh;
-  width: 40vw;
-  background-color: #7897D2;
-  border-radius: 83% 17% 57% 43% / 67% 66% 34% 33%;
-  top: 10vh;
-  right: -17vw;
-  opacity: 0.5;
-  -webkit-filter: blur(4em);
-          filter: blur(4em);
-  position: absolute;
-  z-index: 1;
-}
-
-.top-right-yellow {
-  height: 30vh;
-  width: 25vw;
-  background-color: #EDAA6C;
-  border-radius: 52% 48% 47% 53% / 51% 46% 54% 49%;
-  top: 22vh;
-  right: 25vw;
-  opacity: 0.5;
-  -webkit-filter: blur(4em);
-          filter: blur(4em);
-  position: absolute;
-  z-index: 1;
-}
-
-.bottom-left-red {
-  height: 20vh;
-  width: 45vw;
-  background-color: #FF7E76;
-  border-radius: 50% 30% 30% 60% / 60% 40% 80% 30%;
-  bottom: -5vh;
-  left: -10vw;
-  opacity: 0.5;
-  -webkit-filter: blur(4em);
-          filter: blur(4em);
-  position: absolute;
-  z-index: 1;
-}
-
-.bottom-left-blue {
-  height: 37vh;
-  width: 30vw;
-  background-color: #7897D2;
-  border-radius: 83% 17% 57% 43% / 67% 66% 34% 33%;
-  bottom: 20vh;
-  left: -13vw;
-  opacity: 0.5;
-  -webkit-filter: blur(4em);
-          filter: blur(4em);
-  position: absolute;
-  z-index: 1;
-}
-
-.bottom-left-yellow {
-  height: 28vh;
-  width: 30vw;
-  background-color: #EDAA6C;
-  border-radius: 82% 18% 76% 24% / 58% 22% 78% 42%;
-  left: 22vw;
-  bottom: 15vh;
-  opacity: 0.5;
-  -webkit-filter: blur(4em);
-          filter: blur(4em);
-  position: absolute;
-  z-index: 1;
-}
-
 @media screen and (max-width: 1560px) {
   h1.main-text {
     font-size: 30px;
@@ -254,6 +254,7 @@ a.italic-text:hover {
   }
   .landing-scroll-text {
     font-size: 10px;
+    margin-bottom: 15vh;
   }
 }
 
@@ -577,7 +578,7 @@ div.main .sections {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 80px 0;
+  margin: 8vh 0;
 }
 
 .projects .projects-row1 {
@@ -704,18 +705,30 @@ div.main .sections {
 
 @media screen and (max-width: 983px) {
   .projects {
-    width: 80vw;
+    width: 85vw;
+    min-height: 80vh;
     padding-top: 10vh;
   }
+  .projects .projects-container {
+    margin: 3vh 0;
+  }
+  .projects .projects-row1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .projects .project-circle {
-    width: 20vw;
-    height: 20vw;
+    width: 28vw;
+    height: 28vw;
+    margin: 2vh 0;
   }
   .projects .project-title {
     font-size: 80%;
   }
   .projects .project-overlay {
-    width: 20vw;
+    height: 28vw;
+    width: 28vw;
   }
 }
 
@@ -810,6 +823,7 @@ div.main .sections {
 @media screen and (max-width: 983px) {
   .my-art {
     width: 80vw;
+    min-height: 115vh;
     padding-top: 10vh;
   }
   .my-art .art-blocks {
@@ -832,8 +846,8 @@ div.main .sections {
     margin: 0;
   }
   .my-art .art-blocks img {
-    width: 30vw;
-    height: 30vw;
+    width: 36vw;
+    height: 36vw;
     margin-top: 1vw;
   }
   .insta-link {
@@ -911,6 +925,7 @@ div.main .sections {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 0;
   }
   .about .about-content .about-text {
     width: 60vw;
@@ -1025,8 +1040,8 @@ div.main .sections {
 @media screen and (max-width: 983px) {
   .contact {
     width: 80vw;
-    padding-top: 20vh;
-    height: 20vh;
+    padding-top: 10vh;
+    min-height: 50vh;
   }
   .contact .contact-social-links {
     width: 70vw;
@@ -1035,8 +1050,8 @@ div.main .sections {
             justify-content: space-between;
   }
   .contact .contact-social-links a {
-    width: 11vw;
-    height: 11vw;
+    width: 12.5vw;
+    height: 12.5vw;
     font-size: 20px;
   }
   .contact .contact-social-links a:hover {
