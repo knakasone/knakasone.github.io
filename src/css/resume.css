@@ -150,8 +150,8 @@ section {
 }
 
 section h3 {
-  font-size: 1.3em;
-  letter-spacing: 0.5vw;
+  font-size: 1.4em;
+  letter-spacing: 5px;
   margin: 0 auto;
   margin-bottom: 3vh;
   font-family: "Playfair Display", serif;
@@ -159,8 +159,8 @@ section h3 {
 }
 
 section ul {
-  text-indent: 3vw;
-  list-style-position: inside;
+  margin-left: 2vw;
+  text-indent: 0;
   padding: 2vh 0;
 }
 
@@ -193,6 +193,11 @@ section.work p.date {
   font-style: italic;
 }
 
+section.projects div.projects-work, section.work div.projects-work {
+  width: 55%;
+  margin: 0 auto;
+}
+
 section.skills, section.education, section.contact {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -200,6 +205,10 @@ section.skills, section.education, section.contact {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+section.skills ul, section.education ul, section.contact ul {
+  margin-left: 0;
 }
 
 section.skills h3 {
@@ -213,11 +222,102 @@ section.skills ul {
   margin-bottom: 2vh;
 }
 
+section.skills ul li {
+  line-height: 2.6vh;
+  font-size: 1em;
+}
+
+div.degree {
+  margin-top: 1vh;
+  margin-bottom: 4vh;
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+div.degree p {
+  margin: 1.2vh 0;
+}
+
+div.degree p:nth-child(1) {
+  margin-bottom: 0;
+}
+
+div.degree p:nth-child(2) {
+  margin-top: 0;
+}
+
+div.degree p:nth-child(3) {
+  font-weight: 800;
+  font-size: 1em;
+}
+
+div.degree p:nth-child(4) {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+div.courses {
+  text-align: center;
+}
+
+div.courses h4 {
+  width: 18vw;
+  margin: 0 auto;
+  padding-bottom: 3px;
+  font-weight: 800;
+  font-size: 1.05em;
+}
+
+div.courses ul {
+  text-indent: 0;
+  list-style: none;
+}
+
+div.courses ul li {
+  margin-bottom: 2vh;
+}
+
+div.courses ul li h5 {
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+div.courses ul li a {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+div.courses ul li p {
+  font-size: 0.8em;
+}
+
+section.contact {
+  margin-bottom: 10vh;
+  text-align: center;
+  font-size: 1.05em;
+}
+
+section.contact p {
+  margin-bottom: 2vh;
+}
+
+section.contact a.resume {
+  font-size: 0.9em;
+  background-color: #001E4B;
+  color: white;
+  width: 35vw;
+  padding: 1vh 0;
+  border-radius: 20px;
+}
+
 hr {
   height: 1px;
   background-color: #001E4B;
   border: none;
-  width: 35vw;
+  width: 50vw;
   margin: 5vw auto;
 }
 
@@ -239,5 +339,31 @@ a:hover {
 
 a:visited {
   color: #001E4B;
+}
+
+@media screen and (max-width: 1500px) {
+  section.projects div.projects-work, section.work div.projects-work {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  hr {
+    width: 70vw;
+  }
+  div.courses h4 {
+    width: 70%;
+  }
+  section.projects div {
+    width: 100%;
+  }
+  section.work div {
+    width: 100%;
+  }
+  section.projects div.projects-work, section.work div.projects-work {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=resume.css.map */

@@ -482,6 +482,7 @@ div.main {
     letter-spacing: 0.5px;
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 70%;
     width: 70%;
     text-align: center;
@@ -557,7 +558,6 @@ div.main {
       font-size: 80%
     }
     .project-overlay {
-      height: $min-circle-dim;
       width: $min-circle-dim;
     }
   }
